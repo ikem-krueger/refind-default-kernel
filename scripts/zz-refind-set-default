@@ -1,6 +1,5 @@
 #!/bin/bash
 # rEFInd preference hook
-# Logic by Ikem Krueger, Script by Google Gemini
 
 CONFIG="/etc/default/refind"
 
