@@ -1,5 +1,5 @@
 Package: refind-set-default
-Version: 1.0
+Version: 0.0
 Section: utils
 Priority: optional
 Architecture: all
