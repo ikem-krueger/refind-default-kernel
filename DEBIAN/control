@@ -1,0 +1,7 @@
+Package: refind-set-default
+Version: 1.0
+Section: utils
+Priority: optional
+Architecture: all
+Maintainer: Ikem Krueger <ikem.krueger@gmail.com>
+Description: Automatically prioritizes a specific kernel for rEFInd bootloader.

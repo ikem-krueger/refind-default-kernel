@@ -1,0 +1,2 @@
+# Enter the desired kernel version here (which you get by "uname -r")
+6.18.5-pikaos

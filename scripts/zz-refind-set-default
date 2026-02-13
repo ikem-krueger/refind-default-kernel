@@ -1,0 +1,19 @@
+#!/bin/bash
+# rEFInd preference hook
+# Logic by Ikem Krueger, Script by Google Gemini
+
+CONFIG="/etc/default/refind"
+
+if [ -f "$CONFIG" ]; then
+    TARGET_VERSION=$(grep -v "#" "$CONFIG")
+    if [ -n "$TARGET_VERSION" ]; then
+        FILES=$(ls /boot/*"$TARGET_VERSION"* 2> /dev/null)
+        if [ -n "$FILES" ]; then
+            echo "rEFInd-Hook: Enforcing user preference for kernel $TARGET_VERSION"
+
+            touch $FILES
+        else
+            echo "rEFInd-Hook: Version $TARGET_VERSION not found in /boot"
+        fi
+    fi
+fi
