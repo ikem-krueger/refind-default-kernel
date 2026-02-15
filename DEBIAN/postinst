@@ -3,6 +3,6 @@
 set -e
 
 # Create symlink for post-removal hook
-ln -sf /etc/kernel/postinst.d/zz-refind-set-default /etc/kernel/postrm.d/zz-refind-set-default
+ln -sf /etc/kernel/postinst.d/zz-refind-default-kernel /etc/kernel/postrm.d/zz-refind-default-kernel
 
 exit 0

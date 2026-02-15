@@ -1,6 +1,6 @@
 # Dynamically get version from git tag (v1.0 -> 1.0) or fallback
 VERSION = $(shell git describe --tags --abbrev=0 | sed 's/^v//')
-PACKAGE_NAME = refind-set-default
+PACKAGE_NAME = refind-default-kernel
 BUILD_DIR = build_root
 
 .PHONY: all build clean install
