@@ -1,4 +1,4 @@
-Package: refind-set-default
+Package: refind-default-kernel
 Version: 0.0
 Section: utils
 Priority: optional

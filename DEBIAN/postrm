@@ -4,7 +4,7 @@ set -e
 
 # Cleanup on package removal
 if [ "$1" = "remove" ] || [ "$1" = "purge" ]; then
-    rm -f /etc/kernel/postrm.d/zz-refind-set-default
+    rm -f /etc/kernel/postrm.d/zz-refind-default-kernel
 fi
 
 exit 0

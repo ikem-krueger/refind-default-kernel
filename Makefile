@@ -1,6 +1,6 @@
 # Dynamically get version from git tag (v1.0 -> 1.0) or fallback
 VERSION = $(shell git describe --tags --abbrev=0 | sed 's/^v//')
-PACKAGE_NAME = refind-set-default
+PACKAGE_NAME = refind-default-kernel
 BUILD_DIR = build_root
 
 .PHONY: all build clean install
@@ -18,13 +18,13 @@ build: clean
 	
 	@cp DEBIAN/postinst $(BUILD_DIR)/DEBIAN/
 	@cp DEBIAN/postrm $(BUILD_DIR)/DEBIAN/
-	@cp scripts/zz-refind-set-default $(BUILD_DIR)/etc/kernel/postinst.d/
+	@cp scripts/zz-refind-default-kernel $(BUILD_DIR)/etc/kernel/postinst.d/
 	@cp examples/refind.default $(BUILD_DIR)/usr/share/doc/$(PACKAGE_NAME)/examples/
 	@cp README.md $(BUILD_DIR)/usr/share/doc/$(PACKAGE_NAME)/
 	
 	@chmod +x $(BUILD_DIR)/DEBIAN/postinst
 	@chmod +x $(BUILD_DIR)/DEBIAN/postrm
-	@chmod +x $(BUILD_DIR)/etc/kernel/postinst.d/zz-refind-set-default
+	@chmod +x $(BUILD_DIR)/etc/kernel/postinst.d/zz-refind-default-kernel
 	
 	@dpkg-deb --build $(BUILD_DIR) $(PACKAGE_NAME)_$(VERSION)_all.deb
 
